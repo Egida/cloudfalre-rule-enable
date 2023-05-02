@@ -60,14 +60,14 @@ def list_rules():
     response  =  fetch()
     result =  response.get("result")
     if not result:
-        logging("log something here")
+        logging.error("could not get rules list ")
     return [ rule for rule in result if rule.get("id") in RULES]
 
 def get_rules_ids():
     response  =  fetch()
     result =  response.get("result")
     if not result:
-        print("log something here")
+        logging.error("could not get rules list ")
     for rule in result:
         print("%s  => %s" % ( rule.get("id") ,rule.get("description")))
 
@@ -107,4 +107,5 @@ def main():
                 turn_off_ = turn_off(rule)
 
 if __name__ == "__main__":
+    #get_rules_ids()
     main()
