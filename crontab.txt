@@ -1,0 +1,1 @@
+* * * * * /python path  /script folder path/main.py   >> /script folder path/output.txt 2>&1
